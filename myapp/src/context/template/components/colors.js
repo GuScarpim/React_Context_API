@@ -1,35 +1,35 @@
 import React, { createContext, useState } from "react";
 
-var colorMenu = localStorage.getItem('colorMenu')
-var textColorMenu = localStorage.getItem('textColorMenu')
-var textColorMenuHover = localStorage.getItem('textColorMenuHover')
-var colorButtonClose = localStorage.getItem('colorButtonClose')
+const colorCard = localStorage.getItem('colorCard')
+const colorBackAvatar = localStorage.getItem('colorBackAvatar')
+const colorTitle = localStorage.getItem('colorTitle')
+const colorSubTitle = localStorage.getItem('colorSubTitle')
 
 const DEFAULT_VALUE = {
   state: {
-    colorMenu: colorMenu,
-    textColorMenu: textColorMenu,
-    textColorMenuHover: textColorMenuHover,
-    colorButtonClose: colorButtonClose
+    colorCard: colorCard,
+    colorBackAvatar: colorBackAvatar,
+    colorTitle: colorTitle,
+    colorSubTitle: colorSubTitle
   },
   setState: () => { },
 };
 
-const UserContext = createContext(DEFAULT_VALUE);
+const Context = createContext(DEFAULT_VALUE);
 
 const ColorDefaultContextProvider = ({ children }) => {
   const [state, setState] = useState(DEFAULT_VALUE.state);
   return (
-    <UserContext.Provider
+    <Context.Provider
       value={{
         state,
         setState,
       }}
     >
       {children}
-    </UserContext.Provider>
+    </Context.Provider>
   );
 };
 
 export { ColorDefaultContextProvider };
-export default UserContext;
+export default Context;
