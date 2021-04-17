@@ -1,14 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-
   * {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
-  input, button, textarea {
-    font-family: 'Open Sans', sans-serif;
-  }
   ::-webkit-scrollbar {
     width: 5px;
     background-color: #2e2e2e;
@@ -39,9 +35,7 @@ const GlobalStyle = createGlobalStyle`
     display: block;
     padding: 0px;
     margin: 0px;
-    background: #24292E;
-    overflow-x: hidden;
-    overflow-y: auto;
+    background: #001931cf;
   }
 `
 
