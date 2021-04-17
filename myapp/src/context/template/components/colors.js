@@ -17,7 +17,7 @@ const DEFAULT_VALUE = {
 
 const UserContext = createContext(DEFAULT_VALUE);
 
-const ColorDefaultContextProvider = ({ children }: any) => {
+const ColorDefaultContextProvider = ({ children }) => {
   const [state, setState] = useState(DEFAULT_VALUE.state);
   return (
     <UserContext.Provider
