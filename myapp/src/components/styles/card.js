@@ -17,17 +17,6 @@ export const Card = styled.div`
   &:hover {
     box-shadow: 0 0 30px #000;
   }
-
-  input {
-    position: absolute;
-    left: 4px;
-    top: 4px;
-    width: 30px;
-    background-color: #fff;
-    transition: all 0.5s;
-    outline: none;
-    border: none;
-  }
 `
 
 export const ContentImage = styled.div`
