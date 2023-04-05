@@ -4,10 +4,13 @@ import * as S from './styles/card'
 import ContextColors from '../context/template/components/colors'
 
 import Imagem from '../assets/megamen.gif'
+import { userContext } from '../context/user'
 
 function App() {
   const { state } = useContext(ContextColors)
+  const { user } = useContext(userContext)
 
+  console.log({ user })
   return (
     <S.Card color={state.colorCard}>
       <S.ContentImage color={state.colorBackAvatar}>
